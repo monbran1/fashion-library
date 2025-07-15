@@ -3,28 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ブランド図書館 - Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>FASHION ARCHIVE | ファッションブランド図書館</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>ブランド図書館</h1>
-    <p class="subtitle">好きなブランドを探そう</p>
+    <h1 class="site-title">FASHION ARCHIVE</h1>
+    <nav>
+      <a href="#">ブランド一覧</a>
+      <a href="#">このサイトについて</a>
+    </nav>
   </header>
 
   <main>
     <section class="brand-list">
-      <h2>掲載ブランド一覧</h2>
-      <ul>
-        <li><a href="brands/louisvuitton.html">Louis Vuitton</a></li>
-        <li><a href="brands/gucci.html">GUCCI</a></li>
-        <li><a href="brands/raf-simons.html">Raf Simons</a></li>
-      </ul>
+      <!-- Louis Vuitton -->
+      <article class="brand-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Louis_Vuitton_logo_and_wordmark.svg/512px-Louis_Vuitton_logo_and_wordmark.svg.png" alt="Louis Vuittonロゴ" class="brand-image">
+        <div class="brand-content">
+          <h2 class="brand-name">Louis Vuitton</h2>
+          <div class="brand-history">
+            <div class="section-title">歴史</div>
+            <p>1854年パリで創業。トランク職人ルイ・ヴィトンが設立し、ラグジュアリーブランドの象徴に。</p>
+          </div>
+          <div class="brand-designer">
+            <div class="section-title">デザイナー</div>
+            <p>
+              <a href="#">ニコラ・ジェスキエール</a>（2013-現在）<br>
+              <a href="#">ヴァージル・アブロー</a>（2018-2021／メンズ）<br>
+              <a href="#">キム・ジョーンズ</a>（2011-2018／メンズ）
+            </p>
+          </div>
+          <div class="brand-item">
+            <div class="section-title">代表アイテム</div>
+            <img src="https://cdn-images.farfetch-contents.com/13/92/95/51/13929551_18265167_1000.jpg" alt="LV キーポル" loading="lazy">
+            <div>キーポル（Keepall）──旅行バッグの代名詞。モノグラム・キャンバスが象徴。</div>
+          </div>
+          <div class="brand-trend">
+            近年はストリート×ラグジュアリーの融合。ヴァージル・アブロー就任以降、若年層にも圧倒的人気。
+          </div>
+        </div>
+      </article>
+
+      <!-- GUCCI -->
+      <article class="brand-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Gucci_Logo.svg" alt="GUCCIロゴ" class="brand-image">
+        <div class="brand-content">
+          <h2 class="brand-name">GUCCI</h2>
+          <div class="brand-history">
+            <div class="section-title">歴史</div>
+            <p>1921年フィレンツェ創業。グッチオ・グッチが高級皮革工房としてスタート。</p>
+          </div>
+          <div class="brand-designer">
+            <div class="section-title">デザイナー</div>
+            <p>
+              <a href="#">サバト・デ・サルノ</a>（2023-現在）<br>
+              <a href="#">アレッサンドロ・ミケーレ</a>（2015-2022）<br>
+              <a href="#">トム・フォード</a>（1994-2004）
+            </p>
+          </div>
+          <div class="brand-item">
+            <div class="section-title">代表アイテム</div>
+            <img src="https://cdn-images.farfetch-contents.com/14/03/34/07/14033407_17805465_1000.jpg" alt="GUCCI ホースビットローファー" loading="lazy">
+            <div>ホースビットローファー──1953年誕生。世界中のセレブリティに愛され続けるアイコニックな靴。</div>
+          </div>
+          <div class="brand-trend">
+            過去と現在がミックスする独自のレトロモダン。新デザイナーでまた新たな変革期へ。
+          </div>
+        </div>
+      </article>
+
+      <!-- Raf Simons -->
+      <article class="brand-card">
+        <img src="https://seeklogo.com/images/R/raf-simons-logo-0F712C3B62-seeklogo.com.png" alt="Raf Simonsロゴ" class="brand-image">
+        <div class="brand-content">
+          <h2 class="brand-name">Raf Simons</h2>
+          <div class="brand-history">
+            <div class="section-title">歴史</div>
+            <p>1995年設立。ベルギー出身のラフ・シモンズによるモードブランド。</p>
+          </div>
+          <div class="brand-designer">
+            <div class="section-title">デザイナー</div>
+            <p>
+              <a href="#">ラフ・シモンズ</a>（1995-2022）<br>
+              <a href="#">PRADA（共同デザイナー／2020-現在）</a><br>
+              <a href="#">DIOR（クリエイティブ・ディレクター／2012-2015）</a>
+            </p>
+          </div>
+          <div class="brand-item">
+            <div class="section-title">代表アイテム</div>
+            <img src="https://i.pinimg.com/originals/4c/39/82/4c39826b37ebddbe81b2200f39588f56.jpg" alt="Raf Simons スタジアムジャケット" loading="lazy">
+            <div>スタジアムジャケット──パンク・ユースカルチャー×現代美術の融合を体現した逸品。</div>
+          </div>
+          <div class="brand-trend">
+            ハイファッション×サブカル。近年はコラボ＆キュレーション活動も盛ん。
+          </div>
+        </div>
+      </article>
+
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 ブランド図書館</p>
+    <div>
+      <span>&copy; 2025 FASHION ARCHIVE</span>
+    </div>
   </footer>
 </body>
 </html>
