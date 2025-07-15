@@ -49,11 +49,18 @@ h2 {
   font-size: 0.9rem;
   border-radius: 4px;
 }
+.search-link {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+.search-link a {
+  color: #0077cc;
+}
+.brand-info .links a {
+  color: #0077cc;
+}
 ul {
   padding-left: 1.2rem;
-}
-.links a {
-  color: #0077cc;
 }
 .item-card {
   display: flex;
@@ -78,4 +85,15 @@ footer {
   color: #aaa;
   border-top: 1px solid #eee;
   padding: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .item-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .item-card img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0.5rem;
+  }
 }
