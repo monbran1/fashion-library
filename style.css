@@ -1,173 +1,105 @@
-/* ベース設定 */
+
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
-  color: #222;
-  line-height: 1.7;
-}
-a {
-  color: #1a73e8;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
 }
 
-/* ヘッダー */
 header {
-  background: #fff;
-  padding: 1.5rem;
+  background-color: #000;
+  color: #fff;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-header .subtitle {
-  font-size: 1rem;
-  color: #555;
+  padding: 2rem 1rem;
 }
 
-/* LOOK */
-.look {
-  text-align: center;
-  margin: 2rem auto;
+h1 {
+  font-size: 2rem;
+  margin: 0;
 }
+
+.subtitle {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.brand-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
 .look-image-container {
   position: relative;
-  max-width: 600px;
-  margin: 0 auto;
+  text-align: center;
 }
+
 .look-image-container img {
   width: 100%;
-  border-radius: 8px;
+  height: auto;
+  border-radius: 10px;
 }
+
 .look-overlay {
   position: absolute;
-  bottom: 8px;
-  left: 8px;
-  background: rgba(0,0,0,0.6);
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0,0,0,0.6);
   color: #fff;
-  padding: 4px 8px;
-  font-size: 0.9rem;
+  padding: 4px 10px;
   border-radius: 4px;
+  font-size: 0.9rem;
 }
+
 .search-link {
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
 
-/* ブランド概要 */
-.brand-info {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 8px;
-}
-.brand-info h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-.brand-info .links {
-  margin-top: 1rem;
-}
-
-/* デザイナー */
-.designers {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 8px;
-}
-.designers h2 {
-  font-size: 1.2rem;
-}
-.designers ul {
-  padding-left: 1.2rem;
-}
-.designers li {
-  margin-bottom: 0.3rem;
-}
-
-/* アイテム表示 */
 .items {
-  max-width: 800px;
-  margin: 2rem auto;
+  margin-top: 2rem;
 }
-.items h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
+
 .item-card {
   display: flex;
+  align-items: center;
   gap: 1rem;
-  background: #fff;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
+  background: #fafafa;
+  border: 1px solid #eee;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  flex-direction: column;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
+
 .item-card img {
-  width: 100%;
+  max-width: 120px;
   border-radius: 4px;
 }
-.item-info h3 {
-  margin: 0.5rem 0 0.2rem;
-}
-.item-info p {
-  margin: 0 0 0.5rem;
+
+.item-info {
+  flex: 1;
 }
 
-/* フッター */
+.brand-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.brand-list li {
+  margin: 0.5rem 0;
+}
+
 footer {
   text-align: center;
-  margin: 2rem 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #777;
-}
-
-/* トップページ用：ブランドカード一覧 */
-.brand-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-}
-.brand-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-  text-align: center;
-  width: 150px;
-  padding: 1rem;
-  transition: transform 0.2s;
-}
-.brand-card:hover {
-  transform: scale(1.03);
-}
-.brand-card img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-.brand-card h3 {
-  font-size: 1rem;
-  margin: 0;
-}
-
-/* レスポンシブ対応 */
-@media (min-width: 600px) {
-  .item-card {
-    flex-direction: row;
-  }
-  .item-card img {
-    width: 200px;
-    height: auto;
-  }
+  margin: 2rem 0;
 }
