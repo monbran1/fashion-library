@@ -1,86 +1,61 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Louis Vuitton - ブランド図書館</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <title>Louis Vuitton | FASHION ARCHIVE</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Louis Vuitton</h1>
-    <p class="subtitle">Brand introduction page</p>
+    <h1 class="site-title">Louis Vuitton</h1>
+    <nav>
+      <a href="index.html">ブランド一覧へ</a>
+    </nav>
   </header>
 
   <main>
-    <section class="brand-logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Louis_Vuitton_logo_and_wordmark.svg" alt="ロゴ" onerror="this.src='../assets/fallback-logo.png';" />
-    </section>
-
-    <section class="history">
-      <h2>ブランドの歴史</h2>
-      <p>Louis Vuitton の歴史をここに記載します。</p>
-    </section>
-
-    <section class="designers">
-      <h2>歴代デザイナー</h2>
-      <ul>
-        <li><a href='../designers/marc-jacobs.html'>Marc Jacobs</a>（1997–2013）</li>
-        <li><a href='../designers/nicolas-ghesquiere.html'>Nicolas Ghesquière</a>（2013–現在）</li>
-      </ul>
-    </section>
-
-    <section class="look">
-      <div class="look-image-container">
-        <img src="https://www.vogue.com/fashion-shows/fall-2024-ready-to-wear/louis-vuitton/slideshow/1" alt="LOOK画像" onerror="this.src='../assets/fallback-look.jpg';" />
-        <div class="look-overlay">最新LOOK</div>
-      </div>
-      <p class="search-link">
-        🔍 他のLOOK画像を見る：<br>
-        <a href="https://www.google.com/search?q=Louis Vuitton+2025+LOOK+site:vogue.com&tbm=isch" target="_blank">
-          Google画像検索（VOGUE）
-        </a>
-      </p>
-    </section>
-
-    <section class="items">
-      <h2>定番アイテム</h2>
-      <div class="item-card">
-        <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/calvinklein/cabinet/item/133/gg6133-05_1.jpg"
-             alt="商品名" onerror="this.src='../assets/fallback-look.jpg';" />
-        <div class="item-info">
-          <h3>Calvin Klein Low Rise Trunk 3pk</h3>
-          <p>価格：¥6,600（税込、送料無料）</p>
-          <a href="https://hb.afl.rakuten.co.jp/ichiba/4a608beb.0365f0db.4a608bec.47b51772/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcalvinklein%2Fgg6133%2F"
-             target="_blank" rel="nofollow sponsored noopener">✅ 楽天で購入する</a>
+    <section class="brand-list">
+      <article class="brand-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Louis_Vuitton_logo_and_wordmark.svg/512px-Louis_Vuitton_logo_and_wordmark.svg.png" alt="Louis Vuittonロゴ" class="brand-image">
+        <div class="brand-content">
+          <h2 class="brand-name">Louis Vuitton</h2>
+          <div class="brand-history">
+            <div class="section-title">歴史</div>
+            <p>
+              1854年パリで創業。トランク職人ルイ・ヴィトンが設立し、「旅のラグジュアリー」の象徴的存在となる。<br>
+              伝説的なモノグラム・キャンバスの誕生、LVMHグループの中核ブランドへと進化。
+            </p>
+          </div>
+          <div class="brand-designer">
+            <div class="section-title">デザイナー</div>
+            <p>
+              <a href="#">ニコラ・ジェスキエール</a>（2013-現在／ウィメンズ）<br>
+              <a href="#">ヴァージル・アブロー</a>（2018-2021／メンズ）<br>
+              <a href="#">キム・ジョーンズ</a>（2011-2018／メンズ）<br>
+              <a href="#">マーク・ジェイコブス</a>（1997-2013／ウィメンズ）
+            </p>
+          </div>
+          <div class="brand-item">
+            <div class="section-title">代表アイテム</div>
+            <img src="https://cdn-images.farfetch-contents.com/13/92/95/51/13929551_18265167_1000.jpg" alt="LV キーポル" loading="lazy">
+            <div>
+              キーポル（Keepall）──旅行バッグの金字塔。<br>
+              アルマ、スピーディ、ネヴァーフルなども人気。
+            </div>
+          </div>
+          <div class="brand-trend">
+            ストリート×ラグジュアリーをけん引。近年は若年層の憧れブランドとして圧倒的な存在感。
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="rakuten-widget">
-      <h2>おすすめアイテム（楽天）</h2>
-      <div style="margin: 16px auto; text-align: center;">
-        <script type="text/javascript">
-          rakuten_design = "slide";
-          rakuten_affiliateId = "4a608bed.40237230.4a608bee.c0e79f08";
-          rakuten_items = "ranking";
-          rakuten_genreId = "0";
-          rakuten_size = "250x250";
-          rakuten_target = "_blank";
-          rakuten_theme = "gray";
-          rakuten_border = "off";
-          rakuten_auto_mode = "on";
-          rakuten_genre_title = "off";
-          rakuten_recommend = "on";
-          rakuten_ts = "1752589031199";
-        </script>
-        <script type="text/javascript" src="https://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js?20230106"></script>
-      </div>
+      </article>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 ブランド図書館</p>
+    <div>
+      <span>&copy; 2025 FASHION ARCHIVE</span>
+    </div>
   </footer>
 </body>
 </html>
