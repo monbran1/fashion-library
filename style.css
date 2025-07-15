@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap');
 
-/* ベース設定 */
 body {
   font-family: 'Noto Sans JP', 'Open Sans', sans-serif;
   background: #f8f6f5;
@@ -51,7 +50,6 @@ nav a:hover {
   border-bottom: 2px solid #800020;
 }
 
-/* メインカードレイアウト */
 .brand-list {
   max-width: 1200px;
   margin: 48px auto 0 auto;
@@ -98,10 +96,6 @@ nav a:hover {
   color: #800020;
   margin: 0 0 4px 0;
   letter-spacing: 0.05em;
-}
-
-.brand-history, .brand-trend, .brand-designer, .brand-item {
-  margin-bottom: 0.6em;
 }
 
 .section-title {
@@ -175,3 +169,4 @@ footer {
     font-size: 1.35rem;
   }
 }
+
