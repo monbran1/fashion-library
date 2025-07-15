@@ -1,10 +1,9 @@
 body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
-  background: #fdfdfd;
+  background: #f5f5f5;
   color: #111;
   line-height: 1.8;
-  padding-bottom: 3rem;
 }
 header {
   text-align: center;
@@ -20,64 +19,34 @@ header h1 {
   color: #555;
   margin-top: 0.5rem;
 }
-section {
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-h2 {
-  border-left: 5px solid #aaa;
-  padding-left: 1rem;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
-.look-image-container {
-  position: relative;
-}
-.look-image-container img {
-  width: 100%;
-  display: block;
-  border-radius: 6px;
-}
-.look-overlay {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(0,0,0,0.6);
-  color: white;
-  padding: 0.3rem 0.7rem;
-  font-size: 0.9rem;
-  border-radius: 4px;
-}
-.search-link {
-  margin-top: 1rem;
-  font-size: 0.95rem;
-}
-.search-link a {
-  color: #0077cc;
-}
-.brand-info .links a {
-  color: #0077cc;
-}
-ul {
-  padding-left: 1.2rem;
-}
-.item-card {
+
+.brand-list {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+.brand-card {
   background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.item-card img {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  text-align: center;
   width: 150px;
-  border-radius: 4px;
+  padding: 1rem;
+  transition: transform 0.2s;
 }
-.item-info h3 {
-  margin: 0 0 0.5rem;
+.brand-card:hover {
+  transform: scale(1.03);
+}
+.brand-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.brand-card h3 {
+  font-size: 1rem;
+  margin: 0;
 }
 footer {
   text-align: center;
@@ -85,15 +54,4 @@ footer {
   color: #aaa;
   border-top: 1px solid #eee;
   padding: 1rem;
-}
-@media screen and (max-width: 600px) {
-  .item-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .item-card img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 0.5rem;
-  }
 }
