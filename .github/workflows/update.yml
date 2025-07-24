@@ -2,22 +2,50 @@ name: AI自動更新
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 毎日0時に実行
-  workflow_dispatch: # 手動実行も可能
+    - cron: '0 0 * * *'  # 毎日0時に実行
+  workflow_dispatch: # 手動でも実行可能
 
 jobs:
   update-site:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+      - name: Python環境の設定
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      # ここに今後、AI連携処理を入れます（まだ未設定）
+      - name: 必要ライブラリのインストール
+        run: pip install openai
 
-      - name: ファイル更新（仮）
+      - name: AIコンテンツ生成
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          echo "（ここにAIで生成したコンテンツを挿入）" > content.txt
+          python -c "
+import openai, os
+
+openai.api_key = os.getenv('OPENAI_API_KEY')
+
+response = openai.ChatCompletion.create(
+  model='gpt-3.5-turbo',
+  messages=[
+    {'role':'system', 'content':'あなたはファッションブランドについて詳しいライターです。'},
+    {'role':'user', 'content':'今日のおすすめブランドを短く魅力的に紹介してください。'}
+  ]
+)
+
+content = response.choices[0].message.content.strip()
+
+with open('content.txt', 'w', encoding='utf-8') as f:
+    f.write(content)
+"
+
+      - name: AI生成コンテンツをコミット
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add content.txt
-          git commit -m "AIによる自動更新"
+          git commit -m "AI自動更新コンテンツ"
           git push
