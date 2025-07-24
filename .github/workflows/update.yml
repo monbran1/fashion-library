@@ -2,50 +2,51 @@ name: AI自動更新
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 毎日0時に実行
-  workflow_dispatch: # 手動でも実行可能
+    - cron: '0 0 * * *' # 毎日0時に実行
+  workflow_dispatch: # 手動実行も可能
 
 jobs:
   update-site:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Python環境の設定
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python環境をセットアップ
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: 必要ライブラリのインストール
+      - name: 必要なパッケージをインストール
         run: pip install openai
 
-      - name: AIコンテンツ生成
+      - name: AIコンテンツを生成して保存
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          python -c "
-import openai, os
+          echo "import openai, os
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 response = openai.ChatCompletion.create(
   model='gpt-3.5-turbo',
   messages=[
-    {'role':'system', 'content':'あなたはファッションブランドについて詳しいライターです。'},
-    {'role':'user', 'content':'今日のおすすめブランドを短く魅力的に紹介してください。'}
+    {'role': 'system', 'content': 'あなたはファッションブランドに詳しいライターです。'},
+    {'role': 'user', 'content': '今日のおすすめブランドを1つだけ、理由と一緒に短く紹介してください。'}
   ]
 )
 
-content = response.choices[0].message.content.strip()
-
 with open('content.txt', 'w', encoding='utf-8') as f:
-    f.write(content)
-"
+    f.write(response.choices[0].message.content.strip())
+" > ai_generate.py
 
-      - name: AI生成コンテンツをコミット
+          python ai_generate.py
+
+      - name: 生成されたコンテンツをコミット
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add content.txt
-          git commit -m "AI自動更新コンテンツ"
+          git commit -m "AIによる自動更新"
           git push
