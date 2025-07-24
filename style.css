@@ -1,5 +1,0 @@
-body { font-family: sans-serif; background: #fff; color: #333; }
-h1 { font-size: 2rem; margin-bottom: 1rem; }
-.brand-list { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-.brand-card { text-align: center; width: 180px; text-decoration: none; color: #333; }
-.brand-card img { width: 100%; max-height: 100px; object-fit: contain; }
